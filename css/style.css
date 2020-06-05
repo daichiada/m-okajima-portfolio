@@ -1,0 +1,1060 @@
+/*------------------------------------------------------
+Table of content
+--------------------------------------------------------
+1. General Styles (typography, links, Lsits, images , Helper classes, sections)
+2. Header
+3. Home
+4. Profile
+5. Architecture Works
+6. Graphics works
+7. Skills
+8. Contact
+9. Fotter
+------------------------------------------------------*/
+
+/*----------------------------------------
+General Styles
+----------------------------------------*/
+html,body{
+    height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Lato, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, "Meiryo, Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.75;
+	letter-spacing: 1px;
+	background-color: #fff;
+	color: #707070;
+}
+*{
+    box-sizing: border-box;
+    word-break: break-all;
+}
+.section {
+	background-color: #eee;
+  	padding: 100px 0;
+}
+ul{
+    list-style: none;
+}
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 36px;
+}
+h2 {
+	font-size: 26px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+a, a:focus, a:hover, a:active {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.nav-head-txt{
+    padding: 2% 10%;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+.flex{
+    display: flex;
+}
+/*----------------------------------------
+ローディングアニメーション
+----------------------------------------*/
+
+/*▼▼ ここから追加する ▼▼*/
+.loader-wrap {
+	position: fixed;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+/*▲▲ ここまで追加する ▲▲*/
+
+.loader,
+.loader:before,
+.loader:after {
+	background: #ffffff;
+	-webkit-animation: load1 1s infinite ease-in-out;
+	animation: load1 1s infinite ease-in-out;
+	width: 1em;
+	height: 4em;
+}
+.loader {
+	color: #ffffff;
+	text-indent: -9999em;
+	margin: 88px auto;
+	position: relative;
+	font-size: 11px;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+	position: absolute;
+	top: 0;
+	content: '';
+}
+.loader:before {
+	left: -1.5em;
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.loader:after {
+	left: 1.5em;
+}
+@-webkit-keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+@keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+  	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+/*----------------------------------------
+ページトップに戻るボタン
+----------------------------------------*/
+.back-pagetop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.6;
+    z-index: 29;
+    background-color: #fabd0a;
+}
+
+.back-pagetop-logo{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 30;
+  }
+/*----------------------------------------
+2. Header
+----------------------------------------*/
+header.nav-wrapper{
+	width: 100%;
+	padding: 6px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	z-index: 99;
+}
+/* ハンバーガーメニュー */
+nav.gnav-sp {
+    display: none;
+}
+
+.collapse-nabvar{
+    display: block;
+}
+ul.navigation{
+    display: flex;
+    justify-content: flex-end;
+}
+.navigation li{
+    margin-right: 1rem;
+}
+.navigation li a{
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    padding: 15px;
+}
+.navigation li a::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: all 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+.navigation li a:hover::after{
+    width: 100%;
+}
+/*----------------------------------------
+3. Home
+----------------------------------------*/
+
+.home1{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../sample/home.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    z-index: 30;
+}
+
+/*建築で人を魅了させる*/
+h1.txt-home-animation{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    font-family: 游明朝;
+    animation-name: fadein;
+    animation-duration: 3s;
+    color: #fff;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.home-txt{
+    position: absolute;
+    width: auto;
+}
+.sp-br{
+    display: none;
+}
+/*訪れる人が建築に・・・*/
+.home-txt-image{
+    width: 40%;
+    height: auto;
+    position: absolute;
+    top: 45%;
+    left: 15%;
+    animation-name: fadein;
+    animation-duration: 6s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.home-txt-image img{
+    width: 100%;
+}
+.home-txt-image-sp{
+    display: none;
+}
+
+/* Portfolio of Mitsuki Okajima */
+.txt-en{
+    top: 84%;
+    left: 70%;
+    text-align: center;
+    color: #fff;
+}
+.txt-en h1{
+    line-height: 1.4
+}
+/*----------------------------------------
+4. Profile
+----------------------------------------*/
+.profile{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 520px;
+    position: relative;
+    background: rgba(200, 200, 200, 0.3);
+}
+
+.profile-container{
+    display: flex;
+}
+/* プロフィール画像 */
+.avatar-hero{
+    margin: 0 10%;
+}
+.avatar-hero img{
+    width: 300px;
+	margin: 0;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+/* 岡島の経歴*/
+.profile-txt-box{
+    height: auto;
+    margin-left: 5%;
+}
+.history-box{
+    width: 150px;
+    height: 40px;
+    border: 4px solid #015CAD;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3%;
+}
+.history-box p{
+    font-weight: 800;
+    padding-top: 5px;
+    color: #015CAD;
+}
+.profile-txt-box h1{
+    margin-top: 5%;
+}
+/*----------------------------------------
+5. Architecture Works
+----------------------------------------*/
+.a-works{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    background-image: url(../sample/alex-wong-l5Tzv1alcps-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+span.nav-head-txt-detail{
+    font-size: 18px;
+    margin-left: 15px;
+}
+/* Work センター文字　共通部分*/
+.work-txt-center{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+.a-work-txt-center{
+    top:40%;
+}
+.work-txt-center h1{
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+#aw-animation{
+    color: #015CAD;
+}
+.fadeInDown {
+    -webkit-animation-fill-mode:both;
+    -ms-animation-fill-mode:both;
+    animation-fill-mode:both;
+    -webkit-animation-duration:2s;
+    -ms-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    visibility: visible !important;
+   }
+   @-webkit-keyframes fadeInDown {
+    0% { opacity: 0; -webkit-transform: translateY(-20px); }
+    100% { opacity: 1; -webkit-transform: translateY(0); }
+   }
+   @keyframes fadeInDown {
+    0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+    100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
+
+/* View All ボタン*/
+.btn{
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.a-works-btn{
+    background-color: #015CAD;
+    color: #fff;
+    transition:all .7s;
+}
+.a-works-btn:hover{
+    background:#fff;
+    color: #015CAD;
+    transform: scale(0.95);
+    opacity: .8;
+    border-radius: 15px;
+}
+
+
+
+/*----------------------------------------
+6. Graphics works
+----------------------------------------*/
+.g-works{
+    width: 100%;
+    position: relative;
+    height: 100%;
+    background-image: url(../sample/howard-bouchevereau-MU3SIgq5Gpw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+.g-work-txt-center{
+    top: 40%;
+}
+.g-works-btn{
+    background-color: #fff;
+    color: #015cad;
+    transition:all .7s;
+
+}
+.g-works-btn:hover{
+    background:#015CAD;
+    color: #fff;
+    transform: scale(0.95);
+    opacity: .8;
+    border-radius: 15px;
+}
+#gw-animation{
+    color: #fff;
+}
+.fadeInDown {
+    -webkit-animation-fill-mode:both;
+    -ms-animation-fill-mode:both;
+    animation-fill-mode:both;
+    -webkit-animation-duration:2s;
+    -ms-animation-duration:2s;
+    animation-duration:2s;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    visibility: visible !important;
+   }
+   @-webkit-keyframes fadeInDown {
+    0% { opacity: 0; -webkit-transform: translateY(-20px); }
+    100% { opacity: 1; -webkit-transform: translateY(0); }
+   }
+   @keyframes fadeInDown {
+    0% { opacity: 0; -webkit-transform: translateY(-20px); -ms-transform: translateY(-20px); transform: translateY(-20px); }
+    100% { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+}
+/*----------------------------------------
+7. Skills
+----------------------------------------*/
+.skills{
+    width: 100%;
+    padding-bottom: 10%;
+    margin: 0;
+    height: auto;
+    position: relative;
+    background: rgba(200, 200, 200, 0.3);
+}
+
+div.skill-box-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.box-wrapper-l{
+    width: 35%;
+    height: auto;
+    margin: 5% 5% 5% 10%;
+}
+.box-wrapper-r{
+    width: 35%;
+    height: auto;
+    margin: 5% 10% 5% 5%;
+}
+.skill-logo{
+    margin-right: 0.5rem;
+}
+.skill-img-box-wrapper{
+    width: 100%;
+    height: 80%;
+}
+.skill-img-box-wrapper h2{
+    margin-top: 3%;
+}
+.skill-img-box-wrapper p{
+    text-align: center;
+    font-size: 14px;
+    padding-top: 15px;
+}
+.skill-img-box-wrapper a img{
+    opacity: 0.8;
+    transition: .4s;
+}
+.skill-img-box-wrapper a:hover img{
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.skill-txt-box-wrapper{
+    width: 100%;
+    height: auto;
+    margin-top: 5%;
+}
+.box-wrapper img{
+    width: 400px;
+    height: 200px;
+}
+
+.sketchup img{
+    border: 2px solid rgba(0,0,0,0.1);
+    width: 100%;
+}
+/*****フルスクリーンナビゲーション *****/
+.gnav{
+    background: rgba(0,0,0,0.8);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+.gnav-wrap{
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+}
+.gnav-wrap p{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px;
+}
+a.close-btn {
+    font-size: 24px;
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 95%;
+}
+
+/*----------------------------------------
+8.Contact
+----------------------------------------*/
+.contact{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    position: relative;
+    background: #fff;
+}
+.contact-detail-wrapper{
+    width: 100%;
+    justify-content: center;
+}
+.contact-txt-wrapper{
+    display: flex;
+    margin: 0 0 5% 10%;
+}
+.contact-logo-wrapper{
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    margin-top: 5%;
+}
+.contact-logo-wrapper a,.contact-ref-txt a{
+    transition: all .4s;
+    opacity: 0.6;
+}
+
+.contact-logo-wrapper a:hover,.contact-ref-txt a:hover{
+    opacity: 1;
+}
+.contact-ref-txt{
+    font-size: 16px;
+}
+.logo-color{
+    color: #fff;
+}
+.formWrapper{
+    width: 100%;
+    height: auto;
+}
+.form-txt-wrapper{
+    display: flex;
+}
+.form-input-box{
+    width: 100%;
+    height: auto;
+}
+.emailbox{
+    width: 77%;
+    height: 50px;
+    margin: 0 0 2% 20%;
+    padding-left: 15px;
+}
+.namebox{
+    width: 77%;
+    height: 50px;
+    margin: 0 0 2% 3%;
+    padding-left: 15px;
+}
+
+.messaegebox{
+    width: 80%;
+    height: 150px;
+    margin: 0 0 0 10%;
+    padding: 15px;
+    font: normal 400 14px/13px Arial;
+    color: #707070;
+}
+.submit-btn{
+    display: block;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin-top: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 3% 46%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #707070;
+    color: #fff;
+    transition: .4s;
+}
+.submit-btn:hover{
+    transform: scale(0.9);
+}
+/*----------------------------------------
+9.Footer
+----------------------------------------*/
+.footer{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    position: relative;
+    background: #015CAD;
+    color: #fff;
+    text-align: center;
+}
+
+
+/*----------------------------------------
+Mediaqueries
+----------------------------------------*/
+
+/* タブレットのスタイル */
+
+@media screen and (min-width:768px) and (max-width:1024px){
+    .nav-head-txt{
+        font-size: 45px;
+    }
+/* Home */
+    .txt-en {
+        top: 74%;
+        left: 33%;
+    }
+    .home-txt-image{
+        width: 60%;
+        height: auto;
+        position: absolute;
+        top: 40%;
+        left: 15%;
+    }
+/* Profile */
+    .profile{
+        height: 820px;
+    }
+    .profile-container{
+        display: block;
+    }
+    .profile-name{
+        position: absolute;
+        top:16%;
+        left: 53%;
+    }
+    .profile-roma-name{
+        position: absolute;
+        top:30%;
+        left: 53%;
+    }
+    .history-box{
+        position: absolute;
+        top: 53%;
+        left: 43%;
+    }
+    .profile-background{
+        position: absolute;
+        top: 66%;
+        left: 12%;
+        font-weight: 700;
+        line-height: 3;
+    }
+/* Skills */
+
+    div.skill-box-container{
+        display: block;
+     }
+     .skills{
+        height: auto;
+        padding-bottom: 10%;
+     }
+     .skill-img-box-wrapper{
+        height: auto;
+     }
+     .skill-img-box-wrapper h2{
+        font-size: 28px;
+        padding-top: 10px;
+        text-align: center;
+     }
+     .skill-txt-detail{
+         font-size: 14px;
+     }
+     .box-wrapper-l,.box-wrapper-r{
+        width: 80%;
+        height: auto;
+        margin: 10%;
+    }
+     .box-wrapper{
+        width: auto;
+        height: 200px;
+     }
+     .box-wrapper img{
+        height: 100px;
+     }
+
+/* Contact */
+    .contact-logo-wrapper{
+        margin-top: 2%;
+    }
+    .contact-detail-wrapper{
+        display: block;
+    }
+/* Footer */
+
+
+}
+/* スマホのスタイル */
+
+@media screen and (min-width:320px) and (max-width:767px){
+    .nav-head-txt{
+        font-size: 45px;
+    }
+
+/* Header */
+
+    header.nav-wrapper{
+        display: none;
+    }
+/* ハンバーガーメニュー */
+    /*menu*/
+    .menu-sp-wrapper{
+        display: block;
+    }
+    a.menu-sp{
+        height: 20px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 30px;
+        position: fixed;
+        z-index: 99;
+    }
+    .menu-sp p{
+        color: #000;
+    }
+
+    .menu-line{
+        background: #fff;
+        display: block;
+        height: 2px;
+        position: absolute;
+        transition:transform .3s;
+        width: 100%;
+    }
+    .menu-line-center{
+        top: 9px;
+    }
+    .menu-line-bottom{
+        bottom: 0;
+    }
+    .menu-line-top.active{
+        top: 8px;
+        transform: rotate(45deg);
+    }
+    .menu-line-center.active{
+        transform:scaleX(0);
+    }
+    .menu-line-bottom.active{
+        bottom: 10px;
+        transform: rotate(135deg);
+    }
+    /*gnav*/
+    .gnav-sp{
+        background: rgba(0,0,0,0.8);
+        display: none;
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        z-index: 98;
+    }
+    .gnav-sp-wrap{
+        align-items:center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+    }
+    .gnav-menu-item{
+        margin: 40px 0;
+    }
+    .gnav-menu-item a{
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 40px;
+        text-decoration: none;
+        transition: .5s;
+    }
+    .gnav-menu-item a:hover{
+        color: #666;
+    }
+
+
+/* Home */
+    .home1 > h1 {
+        top: 10%;
+        left: 7%;
+        font-size: 40px;
+    }
+    .home1{
+        width: 100vw;
+        height: 100vh;
+    }
+    .sp-br{
+        display: inline;
+    }
+
+    .txt-en{
+        top: 63%;
+        left: 10%;
+        width: 80%;
+    }
+    .txt-en h1{
+        font-size: 30px;
+    }
+    .home-txt-image{
+        display: none;
+    }
+    .home-txt-image-sp{
+        display: block;
+        position: absolute;
+        top: 30%;
+        width: 30%;
+        margin: auto 35%;
+        height: auto;
+        animation-name: fadein;
+        animation-duration: 6s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    .home-txt-image-sp img{
+        width: 100%;
+    }
+/* Profile */
+    .profile{
+        height: 820px;
+    }
+    .profile-container{
+        display: block;
+    }
+    .avatar-hero{
+        width: 230px;
+        margin: auto;
+    }
+    .avatar-hero img{
+        width: 100%;
+    }
+    .nav-head-txt{
+        font-size: 34px;
+        text-align: center;
+    }
+    .profile-name{
+        text-align: center;
+    }
+    .profile-roma-name{
+        text-align: center;
+    }
+    .history-box{
+        position: absolute;
+        top: 55%;
+    }
+    .profile-background{
+        position: absolute;
+        top: 66%;
+        left: 5%;
+        font-weight: 700;
+        line-height: 2;
+    }
+/* Architecture Works */
+    span.nav-head-txt-detail{
+        display: block;
+        font-size: 13px;
+    }
+    .work-txt-center h1{
+        font-size: 45px;
+    }
+
+/* Skills */
+    div.skill-box-container{
+        display: block;
+     }
+     .skills{
+        height: auto;
+        padding-bottom: 10%;
+     }
+     .skill-img-box-wrapper{
+        height: auto;
+     }
+     .skill-img-box-wrapper h2{
+        font-size: 20px;
+        padding-top: 10px;
+        text-align: center;
+     }
+     .skill-txt-detail{
+         font-size: 14px;
+     }
+     .box-wrapper-l,.box-wrapper-r{
+        width: 80%;
+        height: auto;
+        margin: 10%;
+    }
+     .box-wrapper{
+        width: auto;
+        height: 200px;
+     }
+     .box-wrapper img{
+        height: 100px;
+     }
+     .skill-img-box-wrapper p{
+        font-size: 10px;
+     }
+
+/* Contact */
+    .contact-logo-wrapper{
+        margin-top: 2%;
+    }
+    .contact-detail-wrapper{
+        display: block;
+    }
+    .contact-txt-wrapper h2{
+        font-size: 14px;
+        margin-top: 3%;
+    }
+    .contact-ref-txt{
+        font-size: 12px;
+    }
+    .form-txt-wrapper{
+        padding-top: 35px;
+        display: block;
+    }
+    .emailbox{
+        margin-left: 10%;
+        margin-bottom: 3%;
+        width: 80%;
+    }
+    .namebox{
+        margin-left: 10%;
+        margin-bottom: 3%;
+        width: 80%;
+    }
+    .messaegebox{
+        height: 150px;
+    }
+    .submit-btn{
+        width: 50%;
+        margin: 10% 25%;
+    }
+/* Footer */
+    .footer{
+        margin-top:10%;
+    }
+    .footer-logo{
+        width: 36%;
+        padding-top: 3%;
+        margin:0 32% 3% 32%;
+        justify-content: space-around;
+    }
+    .footer-logo i{
+        margin: 5px;
+    }
+    .copyright{
+        font-size: 8px;
+    }
+
+
+
+}

@@ -1,0 +1,708 @@
+/*------------------------------------------------------
+Table of content (Graphics Works)
+--------------------------------------------------------
+1. General Styles (typography, links, Lsits, images , Helper classes, sections)
+2. Home
+3. LOGOs
+------------------------------------------------------*/
+html,body{
+    height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Lato, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, "Meiryo, Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.75;
+	letter-spacing: 1px;
+	background-color: #fff;
+	color: #707070;
+}
+.section {
+	background-color: #eee;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+ul{
+    list-style: none;
+}
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    text-align: justify;
+
+}
+a, a:focus, a:hover, a:active {
+	text-decoration: none;
+	color: inherit;
+    outline: none;
+    cursor: pointer;
+}
+h1{
+    font-size: 36px;
+}
+h2 {
+	font-size: 26px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+a, a:focus, a:hover, a:active {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+/*----------------------------------------
+ローディングアニメーション
+----------------------------------------*/
+
+/*▼▼ ここから追加する ▼▼*/
+.loader-wrap {
+	position: fixed;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+/*▲▲ ここまで追加する ▲▲*/
+
+.loader,
+.loader:before,
+.loader:after {
+	background: #ffffff;
+	-webkit-animation: load1 1s infinite ease-in-out;
+	animation: load1 1s infinite ease-in-out;
+	width: 1em;
+	height: 4em;
+}
+.loader {
+	color: #ffffff;
+	text-indent: -9999em;
+	margin: 88px auto;
+	position: relative;
+	font-size: 11px;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+	position: absolute;
+	top: 0;
+	content: '';
+}
+.loader:before {
+	left: -1.5em;
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.loader:after {
+	left: 1.5em;
+}
+@-webkit-keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+@keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+  	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+
+/*----------------------------------------
+ページトップに戻るボタン
+----------------------------------------*/
+.back-pagetop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.6;
+    z-index: 29;
+    background-color: #fabd0a;
+}
+
+.back-pagetop-logo{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 30;
+  }
+/************************** スマホスタイル **************************/
+
+/*----------------------------------------
+2. Home
+----------------------------------------*/
+.gworks-home-container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../sample/timon-studler-PXeN-BHbCYg-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    color: #fff;
+    z-index: 30;
+}
+.gworks-title{
+    width: 90%;
+    margin: auto;
+    height: auto;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+}
+.gworks-title h1{
+    text-align: center;
+    padding-top: 25px;
+}
+h2.home-header-txt{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    font-size: 24px;
+    font-family: 游明朝;
+    animation-name: fadein;
+    animation-duration: 4s;
+}
+
+@keyframes fadein {
+from {
+    opacity: 0;
+    transform: translateX(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+.home-txt-container{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+}
+.home-detail-txt-container{
+    font-size: 14px;
+    animation-name: fadein;
+    animation-duration: 7s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+.view-logos-txt{
+    position: absolute;
+    top: 63%;
+    left: 15%;
+    width: 70%;
+    height: auto;
+    text-align: center;
+}
+.trans-page-logo,.trans-page-txt{
+    transition: all .4s;
+}
+.trans-page-txt:hover{
+    transform: scale(1.05);
+}
+
+.trans-page-txt{
+    display: block;
+    font-size: 25px;
+    font-weight: 800;
+}
+/*----------------------------------------
+3. LOGOs
+----------------------------------------*/
+.gworks-logos-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.logo-header-txt{
+    color: #707070;
+    padding: 20px;
+}
+.logos{
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+.logos-img-wrapper a img{
+    opacity: 0.8;
+    transition: .4s;
+}
+.logos-img-wrapper a:hover img{
+    opacity: 1;
+    transform: scale(1.05);
+}
+.logos img{
+    width: 300px;
+	margin: 0;
+	-webkit-border-radius: 10%;
+	-moz-border-radius: 10%;
+    border-radius: 10%;
+    margin-bottom:15%;
+    border: solid 1px rgba(200, 200, 200, 0.5);
+}
+
+/*-------------------フルスクリーンナビ---------------------*/
+
+
+.gnav-wrap{
+    background: rgba(0,0,0,0.8);
+    display: none;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    top: 0%;
+    z-index: 99;
+}
+.gnav-img{
+    width: 95vw;
+}
+.gnav-suekawa-img{
+    margin: 35% auto;
+}
+.gnav-suekawa-mono-img{
+    margin: 30% auto;
+}
+.gnav-suekawa-phonto-img{
+    margin: 60% auto;
+}
+.gnav-suekawa-trop-img{
+    margin: 60% auto;
+
+}
+.gnav-suekawa-color-img{
+    margin: 40% auto;
+
+}
+.gnav-suekawa-black-img{
+    margin: 40% auto;
+
+}
+.gnav-suekawa-alsc-img{
+    margin: 40% auto;
+
+}
+.gnav-suekawa-fround-img{
+    margin: 60% auto;
+
+}
+.gnav-suekawa-simple-img{
+    margin: 40% auto;
+
+}
+
+.gnav-kessa-img{
+    margin: 67% auto;
+}
+.gnav-hiyoko-img{
+    margin: 65% auto;
+}
+.gnav-ritsuritsu-img{
+    margin: 65% auto;
+}
+.gnav-g-kessa-img{
+    margin: 60% auto;
+
+}
+.gnav-allwest-img{
+    margin: 40% auto;
+
+}
+.gnav-kessa-color-img{
+    margin: 75% auto;
+    background-color: #fff;
+}
+.gnav-kessa-camp-img{
+    margin: 60% auto;
+
+}
+.gnav-clock-img{
+    margin: 60% auto;
+
+}
+.gnav-thisiswhy-img{
+    margin: 60% auto;
+
+}
+.untitle-gnav-img{
+    margin: 30% auto;
+    height: 70vh;
+    width: 90vw;
+}
+.hiyoko-pamp-gnav-img{
+    margin: 30% auto;
+    height: 70vh;
+    width: 90vw;
+}
+.suekawa-poster-gnav-img{
+    margin: 30% auto;
+    height: 70vh;
+    width: 90vw;
+}
+.suekawa-blue-gnav-img{
+    margin: 30% auto;
+    height: 70vh;
+    width: 90vw;
+
+}
+.suekawa-orange-gnav-img{
+    margin: 30% auto;
+    height: 65vh;
+    width: 90vw;
+
+}
+.suekawa-white-gnav-img{
+    margin: 30% auto;
+    height: 65vh;
+    width: 90vw;
+
+}
+.suekawa-invite-gnav-img{
+    margin: 25% auto;
+
+}
+.suekawa-hna-gnav-img{
+    margin: 25% auto;
+
+}
+.suekawa-nextg-gnav-img{
+    margin: 65% auto;
+    background: #fff;
+
+}
+.suekawa-trop-black-gnav-img{
+    margin: 70% auto;
+
+}
+.suekawa-modern-gnav-img{
+    margin: 60% auto;
+
+}
+.houchiga-gnav-img{
+    margin: 70% auto;
+    background:#fff;
+
+}
+.close-btn{
+    display: block;
+    position: absolute;
+    font-size: 36px;
+    top: 3%;
+    left: 85%;
+}
+/*----------------------------------------
+4. Footer
+----------------------------------------*/
+.gworks-footer{
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    z-index: 15;
+}
+.footer-logo-container a{
+    color: #707070;
+}
+.gworks-footer p{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    color: #707070;
+}
+.footer-logo-container a{
+    transition: .4s;
+    opacity: 0.7;
+}
+.footer-logo-container a:hover{
+    opacity: 1;
+    transform: scale(0.9);
+}
+.footer-logo-container{
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: space-around;
+}
+
+
+
+/************************** タブレットのスタイル **************************/
+
+@media all and (min-width:480px){
+
+/*----------------------------------------
+2. Home
+----------------------------------------*/
+    .gworks-title h1{
+        text-align: left;
+    }
+    h2.home-header-txt{
+        font-size: 34px;
+    }
+    .home-txt-container{
+        width: 90%;
+        top: 45%;
+        left: 5%;
+    }
+    .view-logos-txt{
+        top: 80%;
+    }
+/*----------------------------------------
+3. LOGOs
+----------------------------------------*/
+    .logo-header-txt{
+        padding: 5%;
+    }
+    .logos img{
+        width: auto;
+        margin-bottom: 15%;
+    }
+    .gnav-img{
+        width: 70vw;
+    }
+    .gnav-suekawa-img{
+        margin: 10% auto;
+    }
+    .gnav-suekawa-mono-img{
+        margin: 8% auto;
+    }
+    .gnav-suekawa-phonto-img{
+        margin: 20% auto;
+    }
+    .gnav-kessa-img{
+        margin: 12% auto;
+    }
+    .gnav-hiyoko-img{
+        margin: 8% auto;
+    }
+    .gnav-ritsuritsu-img{
+        margin: 8% auto;
+    }
+    .untitle-gnav-img{
+        margin: 2% auto;
+        height: 95vh;
+    }
+    .hiyoko-pamp-gnav-img{
+        margin: 2% auto;
+        height: 95vh;
+    }
+    .suekawa-poster-gnav-img{
+        margin: 2% auto;
+        height: 95vh;
+    }
+}
+
+/* パソコンのスタイル */
+
+@media all and (min-width:768px){
+
+/*----------------------------------------
+2. Home
+----------------------------------------*/
+
+    h2.home-header-txt{
+        width: 90%;
+        left: 5%;
+    }
+    .home-txt-container{
+        width: 59%;
+        top: 40%;
+        left: 5%;
+    }
+    .home-txt-container h5{
+        font-size: 20px;
+    }
+    .view-logos-txt{
+        top: 80%;
+    }
+/*----------------------------------------
+3. LOGOs
+----------------------------------------*/
+    .logos{
+        display: flex;
+        width: 100%;
+    }
+    .logos-img-wrapper{
+        width: 25%;
+        margin: 5%;
+    }
+    .logos img{
+        width: 100%;
+        margin: 0;
+    }
+    .gnav-img{
+        width: 90vh;
+    }
+    .gnav-suekawa-img{
+        margin: 3% auto;
+    }
+    .gnav-suekawa-mono-img{
+        margin: 3% auto;
+    }
+    .gnav-suekawa-phonto-img{
+        margin: 15% auto;
+    }
+    .gnav-suekawa-trop-img {
+        margin: 17% auto;
+    }
+    .gnav-suekawa-color-img {
+        margin: 4% auto;
+    }
+    .gnav-suekawa-black-img {
+        margin: 4% auto;
+    }
+    .gnav-suekawa-alsc-img {
+        margin: 7% auto;
+    }
+    .gnav-suekawa-alsc-img {
+        margin: 7% auto;
+    }
+    .gnav-suekawa-fround-img {
+        margin: 16% auto;
+    }
+    .gnav-suekawa-simple-img {
+        margin: 4% auto;
+    }
+    .gnav-g-kessa-img {
+        margin: 18% auto;
+    }
+    .gnav-allwest-img {
+        margin: 4% auto;
+    }
+    .gnav-kessa-color-img {
+        margin: 30% auto;
+    }
+    .gnav-kessa-camp-img {
+        margin: 18% auto;
+    }
+    .gnav-clock-img {
+        margin: 18% auto;
+    }
+    .gnav-thisiswhy-img {
+        margin: 16% auto;
+    }
+    .gnav-kessa-img{
+        margin: 5% auto;
+    }
+    .gnav-hiyoko-img{
+        margin: 2% auto;
+    }
+    .gnav-ritsuritsu-img{
+        margin: 3% auto;
+    }
+    .untitle-gnav-img{
+        margin: 3% auto;
+        height: 90vh;
+        width: auto;
+    }
+    .hiyoko-pamp-gnav-img{
+        margin: 3% auto;
+        height: 90vh;
+        width: auto;
+    }
+    .suekawa-poster-gnav-img{
+        margin: 3% auto;
+        height: 90vh;
+        width: auto;
+    }
+    .suekawa-blue-gnav-img {
+        margin: 4% auto;
+        height: 90vh;
+        width: auto;
+    }
+    .suekawa-orange-gnav-img {
+        margin: 4% auto;
+        height: 90vh;
+        width: auto;
+    }
+    .suekawa-white-gnav-img {
+        margin: 4% auto;
+        height: 90vh;
+        width: auto;
+    }
+    .suekawa-invite-gnav-img{
+        margin: 4% auto;
+        height: 90vh;
+        width: auto;
+    }
+    .suekawa-hna-gnav-img{
+        margin: 4% auto;
+        height: 90vh;
+        width: auto;
+    }
+    .suekawa-nextg-gnav-img{
+        margin: 17% auto;
+    }
+    .suekawa-trop-black-gnav-img{
+        margin: 18% auto;
+    }
+    .suekawa-modern-gnav-img {
+        margin: 18% auto;
+    }
+    .houchiga-gnav-img{
+        margin: 27% auto;
+    }
+}

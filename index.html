@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- SITE TITLE -->
+    <title>Mitsuki Okajima's Portfolio</title>
+    <meta name="description" content="岡島光希のポートフォリオサイト">
+
+
+	<!-- Favicon -->
+    <link rel="icon" href="About/favicon-mickey.jpg">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Main JavaScript -->
+    <link rel="stylesheet" href="js/main.js">
+
+    <!-- FontAwsome -->
+    <script src="https://kit.fontawesome.com/a379e55c4d.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body>
+    <!-- LOADING ANIMATION -->
+    <div class="loader-wrap">
+        <div class="loader">Loading...</div>
+    </div>
+    <!-- END LOADING ANIMATION -->
+
+    <!-- MAIN NAVIGATION BAR -->
+    <header class="nav-wrapper">
+        <nav class="navbar-custom">
+                <div class="collapse-navbar">
+                    <ul class="navigation">
+                        <li><b><a href="#home" data-speed="800" >HOME</a></b></li>
+                        <li><b><a href="#profile" data-speed="1000">PROFILE</a></b></li>
+                        <li><b><a href="#a-works" data-speed="1400">WORKS</a></b></li>
+                        <li><b><a href="#skills" data-speed="1600">SKILLS</a></b></li>
+                        <li><b><a href="#contact" data-speed="1700">CONTACT</a></b></li>
+                    </ul>
+                </div><!-- End Navbar Collapse -->
+        </nav>
+    </header>
+    <!-- END MAIN NAVIGATION BAR -->
+    <!-- Only Smart Phone display hamberger menu -->
+        <div class="menu-sp-wrapper">
+            <a class="menu-sp">
+                <span class="menu-line menu-line-top"></span>
+                <span class="menu-line menu-line-center"></span>
+                <span class="menu-line menu-line-bottom"></span>
+            </a>
+        <nav class="gnav-sp">
+            <div class="gnav-sp-wrap">
+                <ul class="gnav-sp-menu">
+                    <li class="gnav-menu-item"><a href="#home">HOME</a></li>
+                    <li class="gnav-menu-item"><a href="#profile">PROFILE</a></li>
+                    <li class="gnav-menu-item"><a href="#a-works">ARCH. WORKS</a></li>
+                    <li class="gnav-menu-item"><a href="#g-works">GRAPHICS WORKS</a></li>
+                    <li class="gnav-menu-item"><a href="#skills">SKILLS</a></li>
+                    <li class="gnav-menu-item"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div><!--gnav-sp-wrap-->
+        </nav>
+    </div>
+    <!-- END Only Smart Phone display hamberger menu -->
+
+    <!-- Sticky Page Top Button -->
+    <div class="back-pagetop">
+        <a href="#">
+            <i class="fas fa-angle-up back-pagetop-logo"></i>
+        </a>
+    </div>
+    <!-- END Sticky Page Top Button -->
+
+
+    <!-- HOME -->
+    <section id="home" class="home1">
+            <h1 class="txt-home-animation">地域と生きる、<br class="sp-br">行動を創る建築</h1>
+            <div class="home-txt-image">
+                <img src="sample/HP 1 white.png" alt="タイトルの画像">
+            </div>
+            <div class="home-txt-image-sp"><!-- スマホのみ表示 -->
+                <img src="sample/HP 2 white.png" alt="タイトルの画像">
+            </div>
+            <div class="home-txt txt-en">
+                <h1>Portfolio of <br> Mitsuki Okajima</h1>
+            </div>
+    </section>
+    <!-- END HOME -->
+
+    <!-- PROFILE -->
+    <section id="profile" class="profile">
+        <h1 class="nav-head-txt nvh-txt-pro">Profile</h1>
+        <div class="profile-container">
+
+            <div class="profile-img-box avatar-hero">
+                <img src="About/HP_191218_0250.jpg" alt="プロフィール画像" width="400" height="400">
+            </div>
+
+            <div class="profile-txt-box">
+                <div class="history-box">
+                    <p>経歴</p>
+                </div>
+                    <h1 class="profile-name marker-animation">岡島光希</h1>
+                      <h4 class="profile-roma-name marker-animation">Mitsuki Okajima</h4>
+                            <p class="profile-background"> 1997　滋賀県大津市生まれ<br>
+                                2015　京都私立大谷高校　卒業<br>
+                                2015　立命館大学理工学部建築都市デザイン学科　入学<br>
+                                2019　立命館大学院理工学研究科環境都市専攻建築都市デザインコース　入学<br>
+                            </p>
+            </div> <!-- End Profile-txt-box -->
+
+        </div>  <!-- End Profile Container -->
+    </section>
+    <!-- END PROFILE -->
+
+    <!-- ARCHITECTURE WORK -->
+    <section id="a-works" class="a-works">
+        <!-- Works これまで創ったもの -->
+        <h1 class="nav-head-txt nvh-txt-woks">Works<span class="nav-head-txt-detail">これまでに創ったもの</span></h1>
+
+        <!-- "Architecture Works"とボタン -->
+        <div class="a-work-txt-center work-txt-center">
+            <h1 id="aw-animation">Architecture<br>Works</h1>
+            <button type="button" class="btn a-works-btn" onclick="location.href='./aworks.html'">View All</button>
+        </div><!-- End "Architecture Works"とボタン -->
+
+    </section>
+    <!-- END ARCHITECTURE WORK -->
+
+    <!-- GRAPHICS WORK -->
+    <section id="g-works" class="g-works">
+        <!-- Works これまで創ったもの -->
+        <h1 class="nav-head-txt nvh-txt-woks">Works<span class="nav-head-txt-detail">これまでに創ったもの</span></h1>
+
+        <!-- "Graphics Works"とボタン -->
+        <div class="g-work-txt-center work-txt-center">
+            <h1 id="gw-animation">Graphics<br>Works</h1>
+            <button type="button" class="btn g-works-btn" onclick="location.href='./gworks.html'">View All</button>
+        </div>
+    </section>
+    <!-- END GRAPHICS WORK -->
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <h1 class="nav-head-txt nvh-txt-skills">PC Skills<span class="nav-head-txt-detail">このようなソフトを使用してきました</span></h1>
+
+            <!-- PCスキル一覧 -->
+
+             <!-- box-container 1段目 Archi CADと Twinmortion -->
+            <div class="skill-box-container flex">
+                    <div class="box-wrapper-l">
+                            <div class="skill-img-box-wrapper">
+                                <a href="https://www.graphisoft.co.jp/archicad/"><img src="sample/archicad-img.jpg" alt="Archi CADのイメージ画像"></a>
+                                <h2><span class="skill-logo"><i class="fas fa-drafting-compass"></i></span>ARCHI CAD</h2>
+                            </div>
+
+                    </div><!-- END box-wrapper-l -->
+
+                    <div class="box-wrapper-r">
+                            <div class="skill-img-box-wrapper">
+                                <a href="https://www.graphisoft.co.jp/download/twinmotion/"><img src="sample/twinmotion-logo2.jpg" alt="Twinmotionのイメージ画像"></a>
+                                <h2><span class="skill-logo"><i class="fas fa-drafting-compass"></i></span>Twinmotion</h2>
+                            </div>
+
+                    </div>
+            </div><!-- END box-container 1段目 Archi CADと Twinmortion -->
+
+            <!-- box-container 2段目 AUTO CAD, Rhinoceros -->
+             <div class="skill-box-container flex">
+                <div class="box-wrapper-l">
+                        <div class="skill-img-box-wrapper">
+                            <a href="https://www.autodesk.co.jp/products/autocad/overview"><img src="sample/autocad-logo.jpg" alt="AUTO CADのイメージ画像"></a>
+                            <h2><span class="skill-logo"><i class="fas fa-drafting-compass"></i></span>AUTO CAD</h2>
+                        </div>
+                </div><!-- END box-wrapper-l -->
+
+                <div class="box-wrapper-r">
+                        <div class="skill-img-box-wrapper">
+                            <a href="https://www.rhino3d.co.jp/"><img src="sample/rhino-logo.png" alt="Rhinocerousのイメージ画像"></a>
+                            <h2><span class="skill-logo"><i class="fas fa-drafting-compass"></i></span>Rhinoceros</h2>
+                        </div>
+                </div>
+            </div><!-- END box-container 2段目 AUTO CAD, Rhinoceros, -->
+
+            <!-- box-container 3段目 Photshopと Illustrator -->
+            <div class="skill-box-container flex">
+                    <div class="box-wrapper-l">
+                            <div class="skill-img-box-wrapper">
+                                <a href="https://www.adobe.com/jp/products/photoshopfamily.html"><img src="sample/adobe-phtoshp-logo.png" alt="Photoshopのイメージ画像"></a>
+                                <h2><span class="skill-logo"><i class="fas fa-palette skill-logo"></i></span>Photshop</h2>
+                            </div>
+                    </div>
+                    <div class="box-wrapper-r">
+                            <div class="skill-img-box-wrapper">
+                                <a href="https://www.adobe.com/jp/products/illustrator/beginner.html"><img src="sample/adobe-illustrator-logo.jpg" alt="Illustrationのイメージ画像"></a>
+                                <h2><span class="skill-logo"><i class="fas fa-palette skill-logo"></i></span>Illustraitor</h2>
+                            </div>
+                    </div>
+            </div><!-- END box-container 3段目 Photshopと Illustrator -->
+
+
+             <!-- box-container 4段目 Sketch Up Others -->
+             <div class="skill-box-container flex">
+                <div class="box-wrapper-l">
+                        <div class="skill-img-box-wrapper sketchup">
+                            <a href="https://www.sketchup.com/ja"><img src="sample/sketchup-logo.png" alt="Sketch Upのイメージ画像"></a>
+                            <h2><span class="skill-logo"><i class="fas fa-palette skill-logo"></i></span>Sketch Up</h2>
+                        </div>
+                </div><!-- END box-wrapper-l -->
+
+                <div class="box-wrapper-r">
+                        <div class="skill-img-box-wrapper">
+                            <img src="sample/others-logo2.jpg" alt="Othersのイメージ画像"></img>
+                            <h2><span class="skill-logo"><i class="fas fa-forward"></i></span>Others</h2>
+                            <p><b>Premire Pro,Movie Maker,Word,Excel,Powerpoint</b>も使用可</p>
+                        </div>
+                </div>
+            </div><!-- END box-container 4段目 Sketch Up others -->
+
+
+    </section>
+    <!-- END SKILLS -->
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <h1 class="nav-head-txt nvh-txt-conatact">Contact<span class="nav-head-txt-detail">お問い合わせはこちらから</span></h1>
+
+          <!-- EmailとBlog詳細-->
+          <div class="contact-detail-wrapper flex">
+
+              <!-- Left-side contct-txt-box -->
+              <div class="contact-txt-wrapper">
+                  <div class="contact-logo-wrapper">
+                        <a href="mailto:805704celtics@gmail.com">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-fw fa-5x fa-stack-2x"></i>
+                                <i class="far fa-envelope fa-fw fa-stack-1x logo-color"></i>
+                            </span>
+                        </a>
+                   </div>
+                   <h2>Email<br><span class="contact-ref-txt"><a href="mailto:805704celtics@gmail.com">805704celtics@gmail.com</a></span></h2>
+              </div><!-- End Left-side contact-txt-wrapper -->
+
+              <!-- Right-side contct-txt-box -->
+              <div class="contact-txt-wrapper">
+                  <div class="contact-logo-wrapper">
+                        <a href="https://moji-village.hatenadiary.com/">
+                            <span class="fa-stack">
+                                <i class="fas fa-circle fa-fw fa-5x fa-stack-2x"></i>
+                                <i class="fab fa-blogger-b fa-fw fa-stack-1x logo-color"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <h2>Blog<br><span class="contact-ref-txt"><a href="https://moji-village.hatenadiary.com/">mojivillage.hatenadiary.com</a></span></h2>
+              </div><!-- Right-side contct-txt-box -->
+
+          </div><!-- END EmailとBlog詳細-->
+
+          <!-- お問い合わせフォーム -->
+          <div id="formWrapper" class="formWrapper">
+              <form action="https://docs.google.com/forms/u/3/d/e/1FAIpQLSf4_Yn-fMu0nDqW_WEJ1jvb6kdeVzpqktVYgjeSZig0oVBxUw/formResponse"  method="post" name="myForm">
+                 <div class="form-txt-wrapper">
+                     <div class="form-input-box">
+                        <input class="emailbox"  type="email" name="emailAddress" value="" autocomplete="email" placeholder="Your Email" required>
+                     </div>
+                     <div class="form-input-box">
+                        <input class="namebox" type="text" name="entry.2005620554" autocomplete="name" placeholder="Your Name" required>
+                    </div>
+                </div>
+                    <textarea class="messaegebox" name="entry.839337160" placeholder="Message" required></textarea>
+                    <input type="submit" value="Submit" class="submit-btn button">
+              </form>
+          </div>
+
+    </section>
+    <!-- END CONTACT -->
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="copyright"><small lang="en">© 2020 Mistuki Okajima inc.</small></p>
+    </footer>
+    <!-- END FOOTER -->
+
+</body>
+</html>

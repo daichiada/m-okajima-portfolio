@@ -1,0 +1,489 @@
+/*------------------------------------------------------
+Table of content (Architecture Works)
+--------------------------------------------------------
+1. General Styles (typography, links, Lsits, images , Helper classes, sections)
+2. 近江一継
+3. イチブトゼンブ
+4. ヒカリノアトリエ
+5. Footer
+------------------------------------------------------*/
+
+/*----------------------------------------
+General Styles
+----------------------------------------*/
+html,body{
+    height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Lato, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, "Meiryo, Osaka", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 1.75;
+	letter-spacing: 1px;
+	background-color: #fff;
+	color: #707070;
+}
+.section {
+	background-color: #eee;
+    padding: 0;
+    width:100%;
+    height:100%;
+}
+ul{
+    list-style: none;
+}
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    color:#fff;
+
+}
+h1{
+    font-size: 26px;
+}
+h2 {
+	font-size: 18px;
+}
+h3 {
+	font-size: 24px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 14px;
+}
+h6 {
+	font-size: 16px;
+}
+a, a:focus, a:hover, a:active {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.flex{
+    display: flex;
+}
+.nav-head-txt{
+    padding: 2% 10%;
+}
+.works-title-txt{
+    margin-left: 3%;
+}
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+.works-detail p{
+    color: #707070;
+}
+.grad-works, .junior-works, .sophomore-works{
+    position: relative;
+    width: 90%;
+    margin: 5%;
+	height: 100vh;
+	background-position:center center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+.aworks-footer a,p{
+    color: #707070;
+}
+/*----------------------------------------
+ローディングアニメーション
+----------------------------------------*/
+
+/*▼▼ ここから追加する ▼▼*/
+.loader-wrap {
+	position: fixed;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+/*▲▲ ここまで追加する ▲▲*/
+
+.loader,
+.loader:before,
+.loader:after {
+	background: #ffffff;
+	-webkit-animation: load1 1s infinite ease-in-out;
+	animation: load1 1s infinite ease-in-out;
+	width: 1em;
+	height: 4em;
+}
+.loader {
+	color: #ffffff;
+	text-indent: -9999em;
+	margin: 88px auto;
+	position: relative;
+	font-size: 11px;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+	position: absolute;
+	top: 0;
+	content: '';
+}
+.loader:before {
+	left: -1.5em;
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+.loader:after {
+	left: 1.5em;
+}
+@-webkit-keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+@keyframes load1 {
+	0%,
+	80%,
+	100% {
+		box-shadow: 0 0;
+		height: 4em;
+	}
+  	40% {
+		box-shadow: 0 -2em;
+		height: 5em;
+	}
+}
+
+/*----------------------------------------
+ページトップに戻るボタン
+----------------------------------------*/
+.back-pagetop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0.6;
+    z-index: 29;
+    background-color: #fabd0a;
+}
+
+.back-pagetop-logo{
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    bottom: 25px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 30;
+  }
+
+
+/************************** スマホスタイル **************************/
+
+/*----------------------------------------
+2. 近江一継
+----------------------------------------*/
+.title-txt{
+    position: absolute;
+    width: 100%;
+    top: 15%;
+}
+
+.title-txt-box{
+    width: 80%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 3%;
+    background-color: rgba(1, 92, 173, 0.5);
+}
+.title-txt-box h5{
+    padding: 10px;
+}
+.title-txt-box h2{
+    text-align: center;
+}
+
+.grad-works h1{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+
+/***** フルスクリーンナビゲーション ～卒業制作～ *****/
+
+.gnav-gw{
+    background: rgba(0,0,0,0.8);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+.gnav-gw-wrap{
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+}
+.gnav-gw-wrap p{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px;
+}
+a.close-btn-gw {
+    font-size: 24px;
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 95%;
+}
+.a-work-gw-nav-txt-wrapper{
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+.nav-works-img-wrapper{
+    width: 30%;
+}
+.a-work-gw-nav-txt-wrapper img{
+    width: 100%;
+}
+.cp-btn-gw{
+    display: block;
+    position: absolute;
+    top: 80%;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #015cad;
+	border: 2px solid #015cad;
+	border-radius: 3px;
+	transition: .4s;
+}
+a.cp-btn-gw:hover {
+	background: #015cad;
+	color: #fff;
+}
+.nav-txt{
+    width: 50%;
+    height: auto;
+}
+
+
+
+/*----------------------------------------
+3. イチブトゼンブ
+----------------------------------------*/
+
+/*****フルスクリーンナビゲーション ～イチブトゼンブ～ *****/
+
+.gnav-jw{
+    background: rgba(0,0,0,0.8);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+.gnav-jw-wrap{
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+}
+.gnav-jw-wrap p{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px;
+}
+a.close-btn-jw {
+    font-size: 24px;
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 95%;
+}
+.a-work-jw-nav-txt-wrapper{
+    width: 100%;
+    height: auto;
+}
+.cp-btn-jw{
+    display: block;
+    position: absolute;
+    top: 80%;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #015cad;
+	border: 2px solid #015cad;
+	border-radius: 3px;
+	transition: .4s;
+}
+a.cp-btn-jw:hover {
+	background: #015cad;
+	color: #fff;
+}
+/*----------------------------------------
+4. ヒカリノアトリエ
+----------------------------------------*/
+/*****フルスクリーンナビゲーション ～イチブトゼンブ～ *****/
+
+.gnav-sw{
+    background: rgba(0,0,0,0.8);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+.gnav-sw-wrap{
+    align-items:center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+}
+.gnav-sw-wrap p{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px;
+}
+a.close-btn-sw {
+    font-size: 24px;
+    display: block;
+    position: absolute;
+    top: 2%;
+    left: 95%;
+}
+.a-work-sw-nav-txt-wrapper{
+    width: 100%;
+    height: auto;
+}
+.cp-btn-sw{
+    display: block;
+    position: absolute;
+    top: 80%;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #015cad;
+	border: 2px solid #015cad;
+	border-radius: 3px;
+	transition: .4s;
+}
+a.cp-btn-sw:hover {
+	background: #015cad;
+	color: #fff;
+}
+
+/*----------------------------------------
+5. Footer
+----------------------------------------*/
+.aworks-footer{
+    position: relative;
+    width: 90%;
+    padding: 0;
+    margin: auto;
+    height: auto;
+    position: relative;
+    background: #fff;
+    color: #000;
+    text-align: center;
+}
+.aworks-footer p{
+    font-size: 14px;
+}
+.footer-logo-container{
+    display: flex;
+    width: auto;
+    height: auto;
+    justify-content: space-around;
+}
+.footer-logo-container a{
+    transition: .4s;
+    opacity: 0.7;
+}
+.footer-logo-container a:hover{
+    opacity: 1;
+    transform: scale(0.9);
+}
+.home-back{
+    margin-left: 20px;
+}
+
+
+/* タブレットのスタイル */
+
+@media all and (min-width:480px){
+
+}
+
+/* パソコンのスタイル */
+
+@media all and (min-width:768px){
+    .grad-works h1{
+        font-size: 36px;
+    }
+    .title-txt{
+        width: 50%;
+        left: 50%;
+    }
+    .works-title-txt{
+        font-size: 28px;
+    }
+    .title-txt-box h2{
+        font-size: 24px;
+    }
+    .title-txt-box h5{
+        font-size: 18px;
+    }
+    .works-detail{
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: 10%;
+        width: 40%;
+        height: auto;
+        padding: 4%;
+        background-color:rgba(255,255,255, 0.8);
+    }
+
+}
